@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaqah Ilmi BTQ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="overlay"></div>
+        <h1>Halaqah Ilmi [BTQ]</h1>
+        <p class="subtitle">Data Anggota • Struktur Ekstra • Analisa Hari Ini</p>
+    </header>
+
+    <nav>
+        <button class="tab-btn active" data-target="anggota">Nama Anggota</button>
+        <button class="tab-btn" data-target="struktur">Struktur Ekstra</button>
+        <button class="tab-btn" data-target="analisa">Analisa Hari Ini</button>
+    </nav>
+
+    <section id="content">
+
+        <div class="tab-content active" id="anggota">
+            <h2>Nama-Nama Anggota</h2>
+            <div class="card-container" id="anggota-list"></div>
+        </div>
+
+        <div class="tab-content" id="struktur">
+            <h2>Struktur Ekstra</h2>
+            <div class="card-container" id="struktur-list"></div>
+        </div>
+
+        <div class="tab-content" id="analisa">
+            <h2>Analisa Ekstra Hari Ini</h2>
+            <div class="big-card">
+                <p id="analisa-text">Memuat analisa...</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2025 Ekstra Halaqah Ilmi BTQ • Website Resmi</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
