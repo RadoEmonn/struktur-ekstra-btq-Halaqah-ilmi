@@ -1,0 +1,66 @@
+// TAB SYSTEM
+const tabs = document.querySelectorAll(".tab-btn");
+const contents = document.querySelectorAll(".tab-content");
+
+tabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+        tabs.forEach(b => b.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.target).classList.add("active");
+    });
+});
+
+// DATA ANGGOTA
+const anggota = [
+    "Ahmad Ramzi",
+    "Fathur Rahman",
+    "Siti Rohmah",
+    "Maya Putri",
+    "Ahmad Fauzan",
+    "Yasmin Zahra",
+    "Rahmat Hidayat",
+    "Laila Salsabila"
+];
+
+// DATA STRUKTUR
+const struktur = [
+    "Pembina: Ust. Muhammad Al-Fatih",
+    "Ketua: Ahmad Ramzi",
+    "Wakil Ketua: Fathur Rahman",
+    "Sekretaris: Siti Rohmah",
+    "Bendahara: Maya Putri",
+    "Koordinator Materi: Ahmad Fauzan",
+    "Koordinator Hafalan: Yasmin Zahra",
+    "Koordinator Kegiatan: Rahmat Hidayat"
+];
+
+// ANALISA
+const analisaToday = `
+• Kegiatan berlangsung kondusif dan terstruktur  
+• Fokus hari ini: peningkatan tajwid & kelancaran bacaan  
+• Evaluasi: mayoritas anggota menunjukkan perkembangan baik  
+• Rencana selanjutnya: latihan intensif murojaah dan praktik bacaan  
+`;
+
+// RENDER ANGGOTA
+const anggotaList = document.getElementById("anggota-list");
+anggota.forEach(n => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.textContent = n;
+    anggotaList.appendChild(card);
+});
+
+// RENDER STRUKTUR
+const strukturList = document.getElementById("struktur-list");
+struktur.forEach(s => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.textContent = s;
+    strukturList.appendChild(card);
+});
+
+// ANALISA
+document.getElementById("analisa-text").innerText = analisaToday;
