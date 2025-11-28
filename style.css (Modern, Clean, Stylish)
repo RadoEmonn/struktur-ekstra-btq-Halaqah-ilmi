@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0e0e10;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(120deg, #352bd6, #6c25c7, #1d62ff);
+    background-size: 200% 200%;
+    animation: gradientMove 8s infinite alternate;
+}
+
+header .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+}
+
+header h1 {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.subtitle {
+    position: relative;
+    margin-top: 10px;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%;}
+    100% { background-position: 100% 50%;}
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: #13131a;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: #23232d;
+    border: 1px solid #3d3d4a;
+    border-radius: 8px;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    background: #4f4fff;
+    border-color: #6d6dff;
+    color: #fff;
+    box-shadow: 0 0 10px #4f4fff80;
+}
+
+/* CONTENT */
+#content {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* CARD LIST */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-4px);
+}
+
+/* BIG CARD */
+.big-card {
+    background: rgba(255,255,255,0.06);
+    padding: 25px;
+    border-radius: 14px;
+    line-height: 1.8;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 12px rgba(255,255,255,0.08);
+}
+
+/* ANIMATION */
+.tab-content {
+    display: none;
+    animation: fade 0.4s ease;
+}
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(10px);}
+    to   { opacity: 1; transform: translateY(0);}
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0.5;
+}
